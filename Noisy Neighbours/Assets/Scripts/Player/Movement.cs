@@ -5,11 +5,17 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public Rigidbody2D character;
-    public Animator animator;
-    Vector2 movement;
+    private Rigidbody2D character;
+    private Animator animator;
+    private Vector2 movement;
 
-    void Update()
+    private void Awake()
+    {
+        character = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+    }
+
+    private void Update()
     {
         // Input
         movement.x = Input.GetAxisRaw("Horizontal");
@@ -21,7 +27,7 @@ public class Movement : MonoBehaviour
     }
 
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         // Movement
         character.MovePosition(character.position + movement * moveSpeed * Time.fixedDeltaTime);

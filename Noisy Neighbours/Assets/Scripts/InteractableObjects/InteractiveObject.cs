@@ -12,8 +12,8 @@ public class InteractiveObject : MonoBehaviour
     public float countdown;
     public bool triggered = false;
     public bool onState;
-    public SpriteRenderer idleSpr;
-    public SpriteRenderer activeSpr;
+    public Sprite idleSpr;
+    public Sprite activeSpr;
     public Text text;
 
     private void Start()
@@ -22,9 +22,9 @@ public class InteractiveObject : MonoBehaviour
         //timer = obj.timer;
         //idleSpr = obj.idleSprite;
         //activeSpr = obj.activeSprite;
-        //idleSpr = GetComponent<SpriteRenderer>();
-        //activeSpr = GetComponent<SpriteRenderer>();
-        text = text.GetComponent<Text>();
+        //idleSpr = GetComponent<Sprite>();
+        //activeSpr = GetComponent<Sprite>();
+        //text = text.GetComponent<Text>();
     }
 
     private void Update()
@@ -33,7 +33,6 @@ public class InteractiveObject : MonoBehaviour
         {
             if (onState)
             {
-                Debug.Log("registered");
                 TurnOff();
             }
             else
@@ -53,18 +52,19 @@ public class InteractiveObject : MonoBehaviour
         triggered = false;   
     }
 
-    void TurnOn()
+    public void TurnOn()
     {
+        Debug.Log("on");
         onState = true;
-        text.text = timer.ToString();
-        gameObject.GetComponent<SpriteRenderer>().sprite = activeSpr.sprite;
+        //text.text = timer.ToString();
+        gameObject.GetComponent<SpriteRenderer>().sprite = activeSpr;
     }
 
-    void TurnOff()
+    public void TurnOff()
     {
+        Debug.Log("off");
         onState = false;
-
-        gameObject.GetComponent<SpriteRenderer>().sprite = idleSpr.sprite;
+        gameObject.GetComponent<SpriteRenderer>().sprite = idleSpr;
     }
 
     void CountdownTimer(float time)

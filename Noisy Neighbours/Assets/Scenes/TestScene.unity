@@ -199,6 +199,23 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2019664903583757163, guid: b82e76ab5606781409ec2574a03b4544,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572491804828519821, guid: b82e76ab5606781409ec2574a03b4544,
+        type: 3}
+      propertyPath: idleSpr
+      value: 
+      objectReference: {fileID: 21300000, guid: 4bf7752a34d5a2540aaa20c96df4bf4d,
+        type: 3}
+    - target: {fileID: 4572491804828519821, guid: b82e76ab5606781409ec2574a03b4544,
+        type: 3}
+      propertyPath: activeSpr
+      value: 
+      objectReference: {fileID: 21300000, guid: ae038edb4d9572c438ed032a0a33fd1a,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 4572491804828519823, guid: b82e76ab5606781409ec2574a03b4544, type: 3}
     - {fileID: 4572491804828519922, guid: b82e76ab5606781409ec2574a03b4544, type: 3}
@@ -325,6 +342,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Billy
+      objectReference: {fileID: 0}
+    - target: {fileID: 120159927746684274, guid: d5595a68134a7164382709eaf0c6bbae,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 120159927746684046, guid: d5595a68134a7164382709eaf0c6bbae,
         type: 3}
@@ -500,7 +522,7 @@ Transform:
   m_LocalScale: {x: 1.581, y: 1.581, z: 1.581}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7892382324426719417
 PrefabInstance:
@@ -626,7 +648,7 @@ PrefabInstance:
     - target: {fileID: 4168178082932206051, guid: a16e7c7a3a6247e40841019290b2f878,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4168178082932206051, guid: a16e7c7a3a6247e40841019290b2f878,
         type: 3}
